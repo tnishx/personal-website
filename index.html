@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tnishx</title>
+    <meta name="description" content="Portfolio of Tanish (tnishx) - Web Developer, Software Engineer, Footballer, and Calisthenics Athlete based in Bangalore. Building interactive, handcrafted interfaces.">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Grain/Noise Overlay -->
+    <div class="noise"></div>
+
+    <!-- Mouse Spotlight Radial Light -->
+    <div id="cursor-spotlight"></div>
+
+    <!-- Background Gradient Blobs -->
+    <div class="blob-wrapper">
+        <div class="blob blob-1"></div>
+        <div class="blob blob-2"></div>
+        <div class="blob blob-3"></div>
+    </div>
+
+    <!-- Elegant Loading Screen -->
+    <div id="loader">
+        <div class="loader-content">
+            <div class="loader-logo-wrapper">
+                <svg class="loader-logo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 371 119" width="180" height="58">
+                    <!-- SVG path data matching green_tnishx.svg -->
+                    <g transform="translate(-10, 5)" fill="#5DD128">
+                        <path d="M48.3,88.1c-8.5,0-16.7-3.7-22.3-10.6c-4.4-5.4-8.3-10-11.6-13.8c-3.7-4.2-5.3-9.7-4.4-15.2c0.9-5.5,4.1-10.3,9-13.1h0 l39-22.7c5.3-3.1,11.7-3.3,17.2-0.8c5.5,2.6,9.4,7.7,10.4,13.7l5,30.4c1.3,7.9-2.6,15.7-9.7,19.4c-5.1,2.7-12,6-20.4,9.9 C56.6,87.2,52.4,88.1,48.3,88.1z M20.9,38.8c-3.8,2.2-6.3,5.9-7,10.2c-0.7,4.3,0.6,8.7,3.5,11.9c3.4,3.8,7.3,8.5,11.7,13.9 c7.2,8.8,19.4,11.6,29.7,6.8c8.3-3.9,15.1-7.2,20.2-9.9c5.6-2.9,8.6-9,7.6-15.2l-5-30.4c-0.8-4.8-3.8-8.7-8.1-10.7 c-4.4-2.1-9.3-1.8-13.5,0.6L20.9,38.8L20.9,38.8z"/>
+                    </g>
+                    <g transform="translate(100, 30) scale(4.8)" fill="#ffffff">
+                        <path d="M6.64 10.34 l0 2.78 l-2.8 0 l0 1.88 c0 1.54 1.02 2.32 2.5 2.32 c0.18 0 0.34 -0.02 0.48 -0.04 s0.26 -0.04 0.4 -0.06 l0 2.78 c-0.18 0.02 -0.32 0.06 -0.42 0.08 c-0.12 0.02 -0.32 0.02 -0.58 0.02 c-3.02 0 -5.38 -2.06 -5.38 -5.1 l0 -7.4 l3 0 l0 2.74 l2.8 0 z M17.4045 15 l0 5 l-3 0 l0 -5 c0 -1.38 -0.64 -2.32 -2.1 -2.32 c-1.44 0 -2.1 0.96 -2.1 2.32 l0 5 l-3 0 l0 -5 c0 -3.08 2.12 -5.1 5.1 -5.1 c3.1 0 5.1 2.12 5.1 5.1 z M17.948999999999998 10 l3 0 l0 10 l-3 0 l0 -10 z M19.448999999999998 9.06 c-1.02 0 -1.74 -0.72 -1.74 -1.74 c0 -1.04 0.72 -1.72 1.74 -1.72 c1.04 0 1.72 0.68 1.72 1.72 c0 1.06 -0.66 1.74 -1.72 1.74 z M21.3935 19.68 l0 -2.8 c1.32 0.4 2.98 0.48 4.34 0.48 c0.54 0 0.96 -0.02 1.26 -0.08 c0.28 -0.04 0.42 -0.14 0.42 -0.28 c0 -0.06 -0.02 -0.1 -0.06 -0.16 c-0.2 -0.2 -0.64 -0.3 -0.9 -0.36 s-0.6 -0.14 -1.02 -0.22 c-0.34 -0.06 -0.74 -0.14 -1.2 -0.24 c-1.56 -0.34 -2.76 -1.22 -2.76 -2.9 c0 -2.48 2.42 -3.22 4.46 -3.22 c1.28 0 2.56 0.18 3.82 0.44 l0 2.82 c-1.26 -0.38 -2.68 -0.48 -4 -0.48 c-0.52 0 -0.88 0.02 -1.1 0.08 s-0.34 0.16 -0.34 0.28 c0 0.18 0.18 0.3 0.52 0.36 c0.34 0.08 0.82 0.18 1.4 0.28 c0.52 0.1 1.02 0.2 1.5 0.32 c1.48 0.38 2.54 1.18 2.54 2.78 c0 2.68 -2.7 3.34 -4.86 3.34 c-1.36 0 -2.7 -0.18 -4.02 -0.44 z M33.498000000000005 15 l0 5 l-3 0 l0 -14 l3 0 l0 4.92 c0.7 -0.74 1.58 -1.02 2.58 -1.02 c2.84 0 4.62 2.44 4.62 5.1 l0 5 l-3 0 l0 -5 c0 -1.36 -0.54 -2.32 -2 -2.32 c-1.44 0 -2.2 0.92 -2.2 2.32 z M45.8825 17.12 l-2.1 2.88 l-3.3 0 l3.76 -5.14 l-3.56 -4.86 l3.3 0 l1.9 2.6 l1.9 -2.6 l3.3 0 l-3.54 4.86 l3.74 5.14 l-3.3 0 z"/>
+                    </g>
+                </svg>
+            </div>
+            <div class="loader-progress-bar">
+                <div class="loader-progress-line"></div>
+            </div>
+            <span class="loader-status">Initializing Core Modules...</span>
+        </div>
+    </div>
+
+    <!-- Floating Glass Navbar -->
+    <header>
+        <div class="navbar-wrapper">
+            <a href="#home" class="logo">
+                <svg class="nav-logo-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 371 119" width="105" height="34">
+                    <g transform="translate(-10, 5)" fill="var(--primary-color)">
+                        <path d="M48.3,88.1c-8.5,0-16.7-3.7-22.3-10.6c-4.4-5.4-8.3-10-11.6-13.8c-3.7-4.2-5.3-9.7-4.4-15.2c0.9-5.5,4.1-10.3,9-13.1h0 l39-22.7c5.3-3.1,11.7-3.3,17.2-0.8c5.5,2.6,9.4,7.7,10.4,13.7l5,30.4c1.3,7.9-2.6,15.7-9.7,19.4c-5.1,2.7-12,6-20.4,9.9 C56.6,87.2,52.4,88.1,48.3,88.1z M20.9,38.8c-3.8,2.2-6.3,5.9-7,10.2c-0.7,4.3,0.6,8.7,3.5,11.9c3.4,3.8,7.3,8.5,11.7,13.9 c7.2,8.8,19.4,11.6,29.7,6.8c8.3-3.9,15.1-7.2,20.2-9.9c5.6-2.9,8.6-9,7.6-15.2l-5-30.4c-0.8-4.8-3.8-8.7-8.1-10.7 c-4.4-2.1-9.3-1.8-13.5,0.6L20.9,38.8L20.9,38.8z"/>
+                    </g>
+                    <g transform="translate(100, 30) scale(4.8)" fill="#ffffff">
+                        <path d="M6.64 10.34 l0 2.78 l-2.8 0 l0 1.88 c0 1.54 1.02 2.32 2.5 2.32 c0.18 0 0.34 -0.02 0.48 -0.04 s0.26 -0.04 0.4 -0.06 l0 2.78 c-0.18 0.02 -0.32 0.06 -0.42 0.08 c-0.12 0.02 -0.32 0.02 -0.58 0.02 c-3.02 0 -5.38 -2.06 -5.38 -5.1 l0 -7.4 l3 0 l0 2.74 l2.8 0 z M17.4045 15 l0 5 l-3 0 l0 -5 c0 -1.38 -0.64 -2.32 -2.1 -2.32 c-1.44 0 -2.1 0.96 -2.1 2.32 l0 5 l-3 0 l0 -5 c0 -3.08 2.12 -5.1 5.1 -5.1 c3.1 0 5.1 2.12 5.1 5.1 z M17.948999999999998 10 l3 0 l0 10 l-3 0 l0 -10 z M19.448999999999998 9.06 c-1.02 0 -1.74 -0.72 -1.74 -1.74 c0 -1.04 0.72 -1.72 1.74 -1.72 c1.04 0 1.72 0.68 1.72 1.72 c0 1.06 -0.66 1.74 -1.72 1.74 z M21.3935 19.68 l0 -2.8 c1.32 0.4 2.98 0.48 4.34 0.48 c0.54 0 0.96 -0.02 1.26 -0.08 c0.28 -0.04 0.42 -0.14 0.42 -0.28 c0 -0.06 -0.02 -0.1 -0.06 -0.16 c-0.2 -0.2 -0.64 -0.3 -0.9 -0.36 s-0.6 -0.14 -1.02 -0.22 c-0.34 -0.06 -0.74 -0.14 -1.2 -0.24 c-1.56 -0.34 -2.76 -1.22 -2.76 -2.9 c0 -2.48 2.42 -3.22 4.46 -3.22 c1.28 0 2.56 0.18 3.82 0.44 l0 2.82 c-1.26 -0.38 -2.68 -0.48 -4 -0.48 c-0.52 0 -0.88 0.02 -1.1 0.08 s-0.34 0.16 -0.34 0.28 c0 0.18 0.18 0.3 0.52 0.36 c0.34 0.08 0.82 0.18 1.4 0.28 c0.52 0.1 1.02 0.2 1.5 0.32 c1.48 0.38 2.54 1.18 2.54 2.78 c0 2.68 -2.7 3.34 -4.86 3.34 c-1.36 0 -2.7 -0.18 -4.02 -0.44 z M33.498000000000005 15 l0 5 l-3 0 l0 -14 l3 0 l0 4.92 c0.7 -0.74 1.58 -1.02 2.58 -1.02 c2.84 0 4.62 2.44 4.62 5.1 l0 5 l-3 0 l0 -5 c0 -1.36 -0.54 -2.32 -2 -2.32 c-1.44 0 -2.2 0.92 -2.2 2.32 z M45.8825 17.12 l-2.1 2.88 l-3.3 0 l3.76 -5.14 l-3.56 -4.86 l3.3 0 l1.9 2.6 l1.9 -2.6 l3.3 0 l-3.54 4.86 l3.74 5.14 l-3.3 0 z"/>
+                    </g>
+                </svg>
+            </a>
+            <nav class="nav-links">
+                <!-- Physics sliding highlight target -->
+                <div class="nav-indicator"></div>
+                
+                <a href="#home" class="nav-item active">Home</a>
+                <a href="#about" class="nav-item">About</a>
+                <a href="#mission" class="nav-item">Mission</a>
+                <a href="#skills" class="nav-item">Skills</a>
+                <a href="#projects" class="nav-item">Projects</a>
+                <a href="#experience" class="nav-item">Experience</a>
+                <a href="#education" class="nav-item">Education</a>
+                <a href="#contact" class="nav-item">Contact</a>
+            </nav>
+            <div class="nav-actions">
+                <div id="menu-icon" class="menu-icon-btn" aria-label="Open Menu">
+                    <span class="bar line-top"></span>
+                    <span class="bar line-middle"></span>
+                    <span class="bar line-bottom"></span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Fullscreen Mobile Navigation Menu -->
+    <div id="mobile-menu" class="mobile-menu-overlay">
+        <div class="mobile-menu-content">
+            <nav class="mobile-nav-links">
+                <a href="#home" class="mobile-nav-item">Home</a>
+                <a href="#about" class="mobile-nav-item">About</a>
+                <a href="#mission" class="mobile-nav-item">Mission</a>
+                <a href="#skills" class="mobile-nav-item">Skills</a>
+                <a href="#projects" class="mobile-nav-item">Projects</a>
+                <a href="#experience" class="mobile-nav-item">Experience</a>
+                <a href="#education" class="mobile-nav-item">Education</a>
+                <a href="#contact" class="mobile-nav-item">Contact</a>
+            </nav>
+            <div class="mobile-menu-footer">
+                <div class="mobile-socials">
+                    <a href="https://linkedin.com/tnishx" target="_blank" class="magnetic"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://github.com/tnishx" target="_blank" class="magnetic"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://x.com/tnishx" target="_blank" class="magnetic"><i class="fa-brands fa-x-twitter"></i></a>
+                </div>
+                <p>tanishsingh797@gmail.com</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Main Content Container -->
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero-section">
+            <!-- Hero Subtle Background Particles Canvas -->
+            <canvas id="hero-particles-canvas"></canvas>
+            <div class="hero-container">
+                <!-- Text Content -->
+                <div class="hero-content">
+                    <div class="hero-badge reveal-item">
+                        <span class="badge-dot"></span> Available for engineering roles
+                    </div>
+                    <h1 class="hero-title reveal-text">
+                        I build software<br>that feels <span class="accent-glow">alive.</span>
+                    </h1>
+                    <p class="hero-subtext reveal-item">
+                        Engineer. Builder. Professional overthinker.
+                    </p>
+                    <p class="hero-desc reveal-item">
+                        I'm <span class="white-text font-bold">Tanish</span>, a 21-year-old developer based in Bangalore. 
+                        I spend a suspicious amount of time learning things that are too niche, too deep, or completely useless in the real world — which somehow makes them more interesting.
+                        I build websites not just to work, but to feel right.
+                    </p>
+                    
+                    <!-- Magnetic Buttons & Socials -->
+                    <div class="hero-btns-wrapper reveal-item">
+                        <div class="hero-btns">
+                            <a href="#projects" class="btn btn-primary magnetic">
+                                <span>Explore Projects</span>
+                                <div class="btn-shine"></div>
+                            </a>
+                            <a href="#contact" class="btn btn-secondary magnetic">
+                                <span>Let's Talk</span>
+                            </a>
+                        </div>
+                        <div class="hero-socials">
+                            <a href="https://linkedin.com/tnishx" target="_blank" class="social-icon-link magnetic" aria-label="LinkedIn">
+                                <i class="fa-brands fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://github.com/tnishx" target="_blank" class="social-icon-link magnetic" aria-label="GitHub">
+                                <i class="fa-brands fa-github"></i>
+                            </a>
+                            <a href="https://x.com/tnishx" target="_blank" class="social-icon-link magnetic" aria-label="X (Twitter)">
+                                <i class="fa-brands fa-x-twitter"></i>
+                            </a>
+                            <a href="https://instagram.com/tanishisfun" target="_blank" class="social-icon-link magnetic" aria-label="Instagram">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                    <!-- Statistics Panel -->
+                    <div class="hero-stats reveal-item">
+                        <div class="stat-card">
+                            <h3 class="stat-number" data-target="5">0</h3>
+                            <p class="stat-label">Projects Built</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-number" data-target="13">0</h3>
+                            <p class="stat-label">Technologies</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-number" data-target="370">0</h3>
+                            <p class="stat-label">Coffee Cups</p>
+                        </div>
+                        <div class="stat-card">
+                            <h3 class="stat-number" data-target="3">0</h3>
+                            <p class="stat-label">Years Learning</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 3D Profile Frame -->
+                <div class="hero-graphics reveal-item">
+                    <div class="profile-container tilt-effect">
+                        <div class="profile-glow"></div>
+                        <div class="profile-card">
+                            <div class="profile-border-anim"></div>
+                            <div class="profile-img-wrap">
+                                <img src="assets/WhatsApp Image 2026-04-08 at 6.52.13 PM.jpeg" alt="Tanish Profile Image" class="profile-img">
+                            </div>
+                            <div class="profile-tag">
+                                <div class="tag-status-dot"></div>
+                                <span class="tag-text">Loc: 12°52'22.6"N 77°47'17.8"E</span>
+                            </div>
+                        </div>
+                        <!-- Floating elements for background depth -->
+                        <div class="floating-badge badge-1"><i class="fa-brands fa-react"></i></div>
+                        <div class="floating-badge badge-2"><i class="fa-brands fa-rust"></i></div>
+                        <div class="floating-badge badge-3"><span>C++</span></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <a href="#about" class="scroll-indicator-wrap" aria-label="Scroll Down">
+                <span class="scroll-indicator-text">Scroll to explore</span>
+                <div class="scroll-mouse">
+                    <span class="scroll-wheel"></span>
+                </div>
+            </a>
+        </section>
+
+        <!-- About Me Section -->
+        <section id="about" class="about-section scroll-trigger-sec">
+            <div class="section-header">
+                <h2 class="section-title">Who I Am & <br>How I <span class="accent-text">Think</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Bento Grid Layout -->
+            <div class="bento-grid">
+                <!-- Card 1: Core Philosophy -->
+                <div class="bento-card bento-philosophy glow-card">
+                    <div class="card-glow-element"></div>
+                    <div class="card-icon"><i class="fas fa-microchip"></i></div>
+                    <div class="bento-content">
+                        <h3>Engineering Philosophy</h3>
+                        <p>
+                            I believe details aren't just details; they design the experience. Coding is more than writing operations — it's about response. 
+                            I obsess over the <span class="white-text font-bold">100ms interactions</span>: the spring-damping of a transition, layout shift preventions, 
+                            and micro-animations. If it doesn't respond instantly and beautifully, it's not finished.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 2: Elder Sibling Power -->
+                <div class="bento-card bento-sibling glow-card">
+                    <div class="card-glow-element"></div>
+                    <div class="card-icon"><i class="fas fa-users-viewfinder"></i></div>
+                    <div class="bento-content">
+                        <h3>Elder Sibling Dynamics</h3>
+                        <p>
+                            Growing up as the eldest taught me patience, responsibility, and how to stay calm when everything's chaotic. 
+                            You learn to lead by example, mediate fights, and somehow always be the one who figures things out. 
+                            It's the kind of training no classroom gives you.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 3: Athletic Discipline -->
+                <div class="bento-card bento-discipline glow-card">
+                    <div class="card-glow-element"></div>
+                    <div class="card-icon"><i class="fas fa-dumbbell"></i></div>
+                    <div class="bento-content">
+                        <h3>Physical Discipline</h3>
+                        <p>
+                            Calisthenics & Football. 
+                            When I'm not at my desk, I'm either on the bars working towards a muscle-up or on the pitch playing football with friends. 
+                            Staying consistent with training keeps me sharp, focused, and honestly just makes everything else feel easier.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Card 4: Details & Niche Interests -->
+                <div class="bento-card bento-niche glow-card">
+                    <div class="card-glow-element"></div>
+                    <div class="card-icon"><i class="fas fa-compass"></i></div>
+                    <div class="bento-content">
+                        <h3>Niche Explorations</h3>
+                        <p>
+                            I like going deep into things most people skip over — custom CLI tools, shell scripts, how browsers actually render stuff, real-time protocols. 
+                            I'd rather build my own small utility than install a bloated package.
+                        </p>
+                        <!-- Dynamic list of interactive topics -->
+                        <div class="interactive-tags">
+                            <span class="tag-item">WebAssembly</span>
+                            <span class="tag-item">Socket.io</span>
+                            <span class="tag-item">Custom CLIs</span>
+                            <span class="tag-item">WebRTC</span>
+                            <span class="tag-item">Systems Coding</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Current Mission Section -->
+        <section id="mission" class="mission-section scroll-trigger-sec">
+            <div class="section-header">
+                <h2 class="section-title">Current <span class="accent-text">Mission</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="mission-container">
+                <!-- Left: Interactive Compiler Terminal -->
+                <div class="mission-terminal glow-card">
+                    <div class="terminal-header">
+                        <div class="terminal-dots">
+                            <span class="dot red"></span>
+                            <span class="dot yellow"></span>
+                            <span class="dot green"></span>
+                        </div>
+                        <div class="terminal-title">tnishx@portfolio ~ </div>
+                        <div class="terminal-action-btn" id="terminal-clear-btn" title="Clear terminal"><i class="fa-solid fa-trash-can"></i></div>
+                    </div>
+                    <div class="terminal-body" id="terminal-logs">
+                        <div class="log-line text-green">Welcome! Type 'help' to see available commands.</div>
+                    </div>
+                    <div class="terminal-input-row">
+                        <span class="terminal-prompt">❯</span>
+                        <input type="text" id="terminal-input" class="terminal-input" placeholder="type a command..." autocomplete="off" spellcheck="false" />
+                    </div>
+                </div>
+
+                <!-- Right: Stranger-kun details and Mascot -->
+                <div class="mission-details-card glass-panel glow-card">
+                    <div class="card-glow-element"></div>
+                    <div class="mission-brand">
+                        <div class="mission-mascot-wrapper">
+                            <img src="assets/kita-kun.png" alt="Stranger-kun Mascot" class="mission-mascot">
+                            <div class="mascot-halo"></div>
+                        </div>
+                        <div class="mission-info">
+                            <div class="mission-status-wrapper">
+                                <span class="status-pulse"></span>
+                                <span class="status-text accent-text font-mono">BUILD_IN_PROGRESS</span>
+                            </div>
+                            <h3>Stranger-kun</h3>
+                            <p class="mission-project-desc">
+                                A next-generation anonymous real-time matching application. Designed to offer sub-100ms connection discovery, end-to-end encryption key exchanges, and fluid, responsive interfaces.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="mission-progress-box">
+                        <div class="progress-info">
+                            <span class="progress-label">Milestone Completeness</span>
+                            <span class="progress-percentage accent-text font-mono">23%</span>
+                        </div>
+                        <div class="progress-track">
+                            <div class="progress-fill" style="width: 23%"></div>
+                        </div>
+                    </div>
+
+                    <div class="mission-tech">
+                        <span class="tech-tag"><i class="fa-brands fa-react"></i> React.js</span>
+                        <span class="tech-tag"><i class="fa-brands fa-node-js"></i> Node.js</span>
+                        <span class="tech-tag"><i class="fa-solid fa-satellite-dish"></i> WebRTC</span>
+                        <span class="tech-tag"><i class="fa-solid fa-plug"></i> Socket.io</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="skills-section scroll-trigger-sec">
+            <div class="section-header">
+                <h2 class="section-title">Core <span class="accent-text">Arsenal</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Interactive Skills Container -->
+            <div class="skills-deck">
+                <!-- Skill Card 1: Frontend -->
+                <div class="skill-deck-card glow-card" data-category="frontend">
+                    <div class="card-glow-element"></div>
+                    <div class="skill-card-head">
+                        <div class="skill-icon"><i class="fas fa-desktop"></i></div>
+                        <h3>Frontend</h3>
+                    </div>
+                    <p class="skill-card-desc">Designing interfaces with fluid layouts, smooth physics engines, and optimal accessibility scores.</p>
+                    <div class="skill-bar-list">
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>React & Next.js</span><span class="skill-val">90%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>TypeScript</span><span class="skill-val">85%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>CSS3 / Vanilla Grid / Flex</span><span class="skill-val">95%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 2: Backend -->
+                <div class="skill-deck-card glow-card" data-category="backend">
+                    <div class="card-glow-element"></div>
+                    <div class="skill-card-head">
+                        <div class="skill-icon"><i class="fas fa-server"></i></div>
+                        <h3>Backend & DBs</h3>
+                    </div>
+                    <p class="skill-card-desc">Constructing secure, fault-tolerant REST APIs, WebSockets nodes, and relational designs.</p>
+                    <div class="skill-bar-list">
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>Node.js / Express</span><span class="skill-val">85%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>PostgreSQL / Relational SQL</span><span class="skill-val">80%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80%"></div></div>
+                        </div>
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>MongoDB / Redis caching</span><span class="skill-val">80%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 3: Languages -->
+                <div class="skill-deck-card glow-card" data-category="languages">
+                    <div class="card-glow-element"></div>
+                    <div class="skill-card-head">
+                        <div class="skill-icon"><i class="fas fa-terminal"></i></div>
+                        <h3>Languages</h3>
+                    </div>
+                    <p class="skill-card-desc">Optimizing algorithms and utilizing memory safety principles for systems coding.</p>
+                    <div class="skill-bar-list">
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>C++ (OOP & DSA)</span><span class="skill-val">88%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88%"></div></div>
+                        </div>
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>JavaScript / TS</span><span class="skill-val">92%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92%"></div></div>
+                        </div>
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>Rust (Core Safety)</span><span class="skill-val">65%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 4: Tools & DevOps -->
+                <div class="skill-deck-card glow-card" data-category="tools">
+                    <div class="card-glow-element"></div>
+                    <div class="skill-card-head">
+                        <div class="skill-icon"><i class="fas fa-toolbox"></i></div>
+                        <h3>Workflows</h3>
+                    </div>
+                    <p class="skill-card-desc">Orchestrating robust pipelines, shell scripts, and remote server virtualizations.</p>
+                    <div class="skill-bar-list">
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>Git / GitHub Actions</span><span class="skill-val">90%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90%"></div></div>
+                        </div>
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>Docker & Containers</span><span class="skill-val">75%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75%"></div></div>
+                        </div>
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>Linux / Bash scripting</span><span class="skill-val">82%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Card 5: System Design -->
+                <div class="skill-deck-card glow-card" data-category="design">
+                    <div class="card-glow-element"></div>
+                    <div class="skill-card-head">
+                        <div class="skill-icon"><i class="fas fa-diagram-project"></i></div>
+                        <h3>System Design</h3>
+                    </div>
+                    <p class="skill-card-desc">Architecting robust systems and resolving structural bottlenecks with calm efficiency.</p>
+                    <div class="skill-bar-list">
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>High availability routing</span><span class="skill-val">80%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80%"></div></div>
+                        </div>
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>Asynchronous patterns</span><span class="skill-val">85%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85%"></div></div>
+                        </div>
+                        <div class="skill-progress-item">
+                            <div class="skill-progress-info"><span>Team Bottleneck Resolving</span><span class="skill-val">95%</span></div>
+                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95%"></div></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Featured Projects Section -->
+        <section id="projects" class="projects-section scroll-trigger-sec">
+            <div class="section-header">
+                <h2 class="section-title">Product <span class="accent-text">Showcases</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="projects-container">
+                <!-- Project 1: Stranger-kun -->
+                <div class="project-showcase-card glow-card" data-project-id="1">
+                    <div class="card-glow-element"></div>
+                    <div class="project-visual">
+                        <div class="project-img-container">
+                            <img src="assets/kita-kun.png" alt="Stranger-kun Preview" class="project-display-img">
+                            <div class="project-visual-glow"></div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-header-info">
+                            <span class="project-number font-mono">01</span>
+                            <h3>Stranger-kun</h3>
+                        </div>
+                        <p class="project-summary">
+                            Anonymous real-time chat application with sub-100ms discovery algorithms, client-side encryption keys, and custom web socket routing modules.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <span class="metric-val accent-text font-mono">&lt; 100ms</span>
+                                <span class="metric-lbl">Matching latency</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-val white-text font-mono">10k+</span>
+                                <span class="metric-lbl">Simulated Clients</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>WebRTC</span>
+                            <span>WebSocket</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-secondary btn-sm case-study-btn magnetic" data-case-study="stranger-kun">
+                                <span>Case Study</span>
+                            </button>
+                            <div class="action-links">
+                                <a href="https://github.com/tnishx" target="_blank" class="magnetic" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" target="_blank" class="magnetic" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2: AetherEngine
+                <div class="project-showcase-card glow-card" data-project-id="2">
+                    <div class="card-glow-element"></div>
+                    <div class="project-visual">
+                        <div class="project-img-container">
+                            Visual engine placeholder generator 
+                            <div class="engine-graphic-canvas">
+                                <div class="canvas-ring canvas-ring-1"></div>
+                                <div class="canvas-ring canvas-ring-2"></div>
+                                <div class="canvas-dot"></div>
+                            </div>
+                            <div class="project-visual-glow"></div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-header-info">
+                            <span class="project-number font-mono">02</span>
+                            <h3>AetherEngine</h3>
+                        </div>
+                        <p class="project-summary">
+                            High-performance custom 2D particle and physics engine built in C++ and compiled to WebAssembly for hyper-fast web environment execution.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <span class="metric-val accent-text font-mono">60 FPS</span>
+                                <span class="metric-lbl">Fluid Rendering</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-val white-text font-mono">50k+</span>
+                                <span class="metric-lbl">Live Particles</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span>C++</span>
+                            <span>WebAssembly</span>
+                            <span>HTML5 Canvas</span>
+                            <span>CMake</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-secondary btn-sm case-study-btn magnetic" data-case-study="aetherengine">
+                                <span>Case Study</span>
+                            </button>
+                            <div class="action-links">
+                                <a href="https://github.com/tnishx" target="_blank" class="magnetic" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" target="_blank" class="magnetic" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div> -->
+
+                <!-- Project 3: Zenith UI
+                <div class="project-showcase-card glow-card" data-project-id="3">
+                    <div class="card-glow-element"></div>
+                    <div class="project-visual">
+                        <div class="project-img-container">
+                            <div class="zenith-ui-graphic">
+                                <div class="zenith-bar accent-bg"></div>
+                                <div class="zenith-bar white-bg"></div>
+                                <div class="zenith-circle"></div>
+                            </div>
+                            <div class="project-visual-glow"></div>
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-header-info">
+                            <span class="project-number font-mono">03</span>
+                            <h3>Zenith UI</h3>
+                        </div>
+                        <p class="project-summary">
+                            A lightweight, zero-dependency CSS and micro-interaction component library focusing on fluid transitions, elastic spring properties, and clean accessibility markers.
+                        </p>
+                        <div class="project-metrics">
+                            <div class="metric-item">
+                                <span class="metric-val accent-text font-mono">1.2 KB</span>
+                                <span class="metric-lbl">Gzip Bundle Size</span>
+                            </div>
+                            <div class="metric-item">
+                                <span class="metric-val white-text font-mono">98+</span>
+                                <span class="metric-lbl">Lighthouse Core</span>
+                            </div>
+                        </div>
+                        <div class="project-tech">
+                            <span>CSS3</span>
+                            <span>Vanilla JS</span>
+                            <span>Spring Physics</span>
+                            <span>A11y</span>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-secondary btn-sm case-study-btn magnetic" data-case-study="zenithui">
+                                <span>Case Study</span>
+                            </button>
+                            <div class="action-links">
+                                <a href="https://github.com/tnishx" target="_blank" class="magnetic" aria-label="GitHub Repository"><i class="fa-brands fa-github"></i></a>
+                                <a href="#" target="_blank" class="magnetic" aria-label="Live Demo"><i class="fa-solid fa-arrow-up-right-from-square"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div> -->
+
+            <!-- Slide-out Side Panel for Detailed Case Study -->
+            <div id="case-study-panel" class="case-study-overlay">
+                <div class="case-study-panel-container">
+                    <button class="panel-close-btn" aria-label="Close Case Study"><i class="fa-solid fa-xmark"></i></button>
+                    <div class="panel-content" id="case-study-details">
+                        <!-- Dynamic case study content loaded via JS -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="experience-section scroll-trigger-sec">
+            <div class="section-header">
+                <h2 class="section-title">Work <span class="accent-text">Experience</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <!-- Modern timeline layout with hover lighting effects -->
+            <div class="experience-timeline">
+                <!-- Job 1 -->
+                <div class="exp-item glow-card">
+                    <div class="card-glow-element"></div>
+                    <div class="exp-badge font-mono">2026 – Present</div>
+                    <div class="exp-content">
+                        <h3>Full-Stack Developer</h3>
+                        <p class="exp-company"><i class="fa-solid fa-location-arrow"></i> Self-Employed, Remote</p>
+                        <p class="exp-desc">
+                            Developing personal products, responsive frameworks, and APIs. Managing clean database configurations in MongoDB, styling high-performance user interfaces in React/Next.js, and running continuous micro-optimization diagnostics.
+                        </p>
+                        <div class="exp-highlights">
+                            <span><i class="fa-regular fa-circle-check"></i> Reduced layout shifts (CLS) to 0.0</span>
+                            <span><i class="fa-regular fa-circle-check"></i> Scaled socket connections via clustering</span>
+                        </div>
+                        <div class="exp-tech-tags">
+                            <span>React</span>
+                            <span>Next.js</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                            <span>Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 2 -->
+                <div class="exp-item glow-card">
+                    <div class="card-glow-element"></div>
+                    <div class="exp-badge font-mono">2024 (June – July)</div>
+                    <div class="exp-content">
+                        <h3>Selected Builder — buildspace Season 5</h3>
+                        <p class="exp-company"><i class="fa-solid fa-location-arrow"></i> Self-Employed, Remote</p>
+                        <p class="exp-desc">
+                            Selected for buildspace Season 5, a global builder community. Built and shipped a product from scratch within strict 6-week timelines. Interacted with international devs and integrated client-feedback reviews.
+                        </p>
+                        <div class="exp-highlights">
+                            <span><i class="fa-regular fa-circle-check"></i> Developed MVP in 3 weeks</span>
+                            <span><i class="fa-regular fa-circle-check"></i> Integrated real-time socket modules</span>
+                        </div>
+                        <div class="exp-tech-tags">
+                            <span>React</span>
+                            <span>Express</span>
+                            <span>WebSockets</span>
+                            <span>Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Job 3 -->
+                <div class="exp-item glow-card">
+                    <div class="card-glow-element"></div>
+                    <div class="exp-badge font-mono">2023 - Present</div>
+                    <div class="exp-content">
+                        <h3>Freelance Web Developer</h3>
+                        <p class="exp-company"><i class="fa-solid fa-location-arrow"></i> Self-Employed, Remote</p>
+                        <p class="exp-desc">
+                            Designed and deployed high-performance responsive landing pages and custom tools for local businesses. Worked closely with clients to improve visual quality, loading speed, and responsive compatibility.
+                        </p>
+                        <div class="exp-highlights">
+                            <span><i class="fa-regular fa-circle-check"></i> Optimized load speed by 40%</span>
+                            <span><i class="fa-regular fa-circle-check"></i> Handcrafted custom responsive grids</span>
+                        </div>
+                        <div class="exp-tech-tags">
+                            <span>HTML5</span>
+                            <span>CSS3</span>
+                            <span>JavaScript</span>
+                            <span>WordPress</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Education Section (STRICTLY UNCHANGED timeline layout matching original design) -->
+        <section id="education" class="education">
+            <h2 class="heading reveal-on-scroll">My <span>Education</span></h2>
+            <div class="timeline reveal-on-scroll">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023 - 2027</div>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Engineering</h3>
+                        <p class="institution">Bangalore Institute of technology, Bangalore</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2020 - 2022</div>
+                    <div class="timeline-content">
+                        <h3>High School</h3>
+                        <p class="institution">Shree ayyapa public school, Bokaro</p>
+                        <p></p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2010 - 2020</div>
+                    <div class="timeline-content">
+                        <h3>Middle school</h3>
+                        <p class="institution">ST Xavier's school, Bokaro</p>
+                        <p></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="contact-section scroll-trigger-sec">
+            <div class="section-header">
+                <h2 class="section-title">Start a <span class="accent-text">Conversation</span></h2>
+                <div class="section-divider"></div>
+            </div>
+
+            <div class="contact-container">
+                <!-- Left: Info deck -->
+                <div class="contact-info-deck">
+                    <h3>Let's build something beautiful.</h3>
+                    <p class="contact-deck-sub">
+                        Have an ambitious project, a role opening, or just want to chat about compilers, calisthenics, or football? Feel free to reach out. I response to all details.
+                    </p>
+
+                    <div class="contact-methods">
+                        <div class="method-card glow-card">
+                            <div class="card-glow-element"></div>
+                            <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                            <div class="method-details">
+                                <span class="method-label">Direct Email</span>
+                                <a href="mailto:tanishsingh797@gmail.com" class="method-value accent-text font-mono">tanishsingh797@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="method-card glow-card">
+                            <div class="card-glow-element"></div>
+                            <div class="method-icon"><i class="fas fa-location-dot"></i></div>
+                            <div class="method-details">
+                                <span class="method-label">Location</span>
+                                <span class="method-value white-text">Bangalore, Karnataka, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Resume Download Component -->
+                    <div class="cv-download-wrapper">
+                        <a href="./assets/tnishx_resume.pdf" download="tanish_resume.pdf" class="btn btn-secondary cv-download-btn magnetic">
+                            <i class="fa-solid fa-cloud-arrow-down"></i>
+                            <span>Download Resume</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right: Glassmorphism Form with Floating Labels -->
+                <div class="contact-form-panel glass-panel glow-card">
+                    <div class="card-glow-element"></div>
+                    <form id="contact-form">
+                        <div class="form-row">
+                            <div class="input-group">
+                                <input type="text" id="form-name" required placeholder=" ">
+                                <label for="form-name">Full Name</label>
+                                <span class="input-focus-border"></span>
+                            </div>
+                            <div class="input-group">
+                                <input type="email" id="form-email" required placeholder=" ">
+                                <label for="form-email">Email Address</label>
+                                <span class="input-focus-border"></span>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" id="form-subject" required placeholder=" ">
+                            <label for="form-subject">Subject</label>
+                            <span class="input-focus-border"></span>
+                        </div>
+                        <div class="input-group textarea-group">
+                            <textarea id="form-message" required placeholder=" " rows="6"></textarea>
+                            <label for="form-message">Your Message</label>
+                            <span class="input-focus-border"></span>
+                        </div>
+
+                        <button type="submit" id="form-submit" class="btn btn-primary btn-full magnetic">
+                            <span>Send Message</span>
+                            <div class="btn-shine"></div>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Minimal Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-status">
+                <span class="status-indicator"></span>
+                <span>Active building on Stranger-kun</span>
+            </div>
+            <div class="footer-meta">
+                <p>&copy; 2026 by tnishx. Crafted with precision.</p>
+                <p class="footer-updated font-mono">Last updated: July 2026</p>
+            </div>
+            <div class="footer-back-top">
+                <a href="#home" class="back-to-top-btn magnetic" aria-label="Scroll to Top">
+                    <i class="fa-solid fa-angle-up"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- CDNs: GSAP, ScrollTrigger, Lenis -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://unpkg.com/lenis@1.1.13/dist/lenis.min.js"></script>
+    
+    <!-- Custom JavaScript Module -->
+    <script src="script.js"></script>
+</body>
+</html>
