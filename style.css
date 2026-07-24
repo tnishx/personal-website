@@ -202,6 +202,10 @@ body {
 .loader-logo {
     display: block;
     filter: drop-shadow(0 0 15px rgba(93, 209, 40, 0.3));
+    height: 58px;
+    width: auto;
+    overflow: visible;
+    margin: 0 auto;
 }
 
 .loader-progress-bar {
@@ -288,6 +292,10 @@ header.sticky .navbar-wrapper {
 .nav-logo-svg {
     filter: drop-shadow(0 0 4px rgba(93, 209, 40, 0.15));
     transition: var(--transition-smooth);
+    height: 34px;
+    width: auto;
+    overflow: visible;
+    display: block;
 }
 
 .logo:hover .nav-logo-svg {
