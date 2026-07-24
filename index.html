@@ -4,6 +4,14 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>tnishx</title>
+    
+    <script>
+        const storedTheme = localStorage.getItem('theme');
+        if (storedTheme === 'light') {
+            document.documentElement.setAttribute('data-theme', 'light');
+        }
+    </script>
+
     <meta name="description" content="Portfolio of Tanish (tnishx) - Web Developer, Software Engineer, Footballer, and Calisthenics Athlete based in Bangalore. Building interactive, handcrafted interfaces.">
     
     <!-- Google Fonts -->
@@ -40,7 +48,7 @@
                     <g transform="translate(-10, 5)" fill="#5DD128">
                         <path d="M48.3,88.1c-8.5,0-16.7-3.7-22.3-10.6c-4.4-5.4-8.3-10-11.6-13.8c-3.7-4.2-5.3-9.7-4.4-15.2c0.9-5.5,4.1-10.3,9-13.1h0 l39-22.7c5.3-3.1,11.7-3.3,17.2-0.8c5.5,2.6,9.4,7.7,10.4,13.7l5,30.4c1.3,7.9-2.6,15.7-9.7,19.4c-5.1,2.7-12,6-20.4,9.9 C56.6,87.2,52.4,88.1,48.3,88.1z M20.9,38.8c-3.8,2.2-6.3,5.9-7,10.2c-0.7,4.3,0.6,8.7,3.5,11.9c3.4,3.8,7.3,8.5,11.7,13.9 c7.2,8.8,19.4,11.6,29.7,6.8c8.3-3.9,15.1-7.2,20.2-9.9c5.6-2.9,8.6-9,7.6-15.2l-5-30.4c-0.8-4.8-3.8-8.7-8.1-10.7 c-4.4-2.1-9.3-1.8-13.5,0.6L20.9,38.8L20.9,38.8z"/>
                     </g>
-                    <g transform="translate(100, 30) scale(4.8)" fill="#ffffff">
+                    <g transform="translate(100, 30) scale(4.8)" fill="var(--text-color)">
                         <path d="M6.64 10.34 l0 2.78 l-2.8 0 l0 1.88 c0 1.54 1.02 2.32 2.5 2.32 c0.18 0 0.34 -0.02 0.48 -0.04 s0.26 -0.04 0.4 -0.06 l0 2.78 c-0.18 0.02 -0.32 0.06 -0.42 0.08 c-0.12 0.02 -0.32 0.02 -0.58 0.02 c-3.02 0 -5.38 -2.06 -5.38 -5.1 l0 -7.4 l3 0 l0 2.74 l2.8 0 z M17.4045 15 l0 5 l-3 0 l0 -5 c0 -1.38 -0.64 -2.32 -2.1 -2.32 c-1.44 0 -2.1 0.96 -2.1 2.32 l0 5 l-3 0 l0 -5 c0 -3.08 2.12 -5.1 5.1 -5.1 c3.1 0 5.1 2.12 5.1 5.1 z M17.948999999999998 10 l3 0 l0 10 l-3 0 l0 -10 z M19.448999999999998 9.06 c-1.02 0 -1.74 -0.72 -1.74 -1.74 c0 -1.04 0.72 -1.72 1.74 -1.72 c1.04 0 1.72 0.68 1.72 1.72 c0 1.06 -0.66 1.74 -1.72 1.74 z M21.3935 19.68 l0 -2.8 c1.32 0.4 2.98 0.48 4.34 0.48 c0.54 0 0.96 -0.02 1.26 -0.08 c0.28 -0.04 0.42 -0.14 0.42 -0.28 c0 -0.06 -0.02 -0.1 -0.06 -0.16 c-0.2 -0.2 -0.64 -0.3 -0.9 -0.36 s-0.6 -0.14 -1.02 -0.22 c-0.34 -0.06 -0.74 -0.14 -1.2 -0.24 c-1.56 -0.34 -2.76 -1.22 -2.76 -2.9 c0 -2.48 2.42 -3.22 4.46 -3.22 c1.28 0 2.56 0.18 3.82 0.44 l0 2.82 c-1.26 -0.38 -2.68 -0.48 -4 -0.48 c-0.52 0 -0.88 0.02 -1.1 0.08 s-0.34 0.16 -0.34 0.28 c0 0.18 0.18 0.3 0.52 0.36 c0.34 0.08 0.82 0.18 1.4 0.28 c0.52 0.1 1.02 0.2 1.5 0.32 c1.48 0.38 2.54 1.18 2.54 2.78 c0 2.68 -2.7 3.34 -4.86 3.34 c-1.36 0 -2.7 -0.18 -4.02 -0.44 z M33.498000000000005 15 l0 5 l-3 0 l0 -14 l3 0 l0 4.92 c0.7 -0.74 1.58 -1.02 2.58 -1.02 c2.84 0 4.62 2.44 4.62 5.1 l0 5 l-3 0 l0 -5 c0 -1.36 -0.54 -2.32 -2 -2.32 c-1.44 0 -2.2 0.92 -2.2 2.32 z M45.8825 17.12 l-2.1 2.88 l-3.3 0 l3.76 -5.14 l-3.56 -4.86 l3.3 0 l1.9 2.6 l1.9 -2.6 l3.3 0 l-3.54 4.86 l3.74 5.14 l-3.3 0 z"/>
                     </g>
                 </svg>
@@ -60,7 +68,7 @@
                     <g transform="translate(-10, 5)" fill="var(--primary-color)">
                         <path d="M48.3,88.1c-8.5,0-16.7-3.7-22.3-10.6c-4.4-5.4-8.3-10-11.6-13.8c-3.7-4.2-5.3-9.7-4.4-15.2c0.9-5.5,4.1-10.3,9-13.1h0 l39-22.7c5.3-3.1,11.7-3.3,17.2-0.8c5.5,2.6,9.4,7.7,10.4,13.7l5,30.4c1.3,7.9-2.6,15.7-9.7,19.4c-5.1,2.7-12,6-20.4,9.9 C56.6,87.2,52.4,88.1,48.3,88.1z M20.9,38.8c-3.8,2.2-6.3,5.9-7,10.2c-0.7,4.3,0.6,8.7,3.5,11.9c3.4,3.8,7.3,8.5,11.7,13.9 c7.2,8.8,19.4,11.6,29.7,6.8c8.3-3.9,15.1-7.2,20.2-9.9c5.6-2.9,8.6-9,7.6-15.2l-5-30.4c-0.8-4.8-3.8-8.7-8.1-10.7 c-4.4-2.1-9.3-1.8-13.5,0.6L20.9,38.8L20.9,38.8z"/>
                     </g>
-                    <g transform="translate(100, 30) scale(4.8)" fill="#ffffff">
+                    <g transform="translate(100, 30) scale(4.8)" fill="var(--text-color)">
                         <path d="M6.64 10.34 l0 2.78 l-2.8 0 l0 1.88 c0 1.54 1.02 2.32 2.5 2.32 c0.18 0 0.34 -0.02 0.48 -0.04 s0.26 -0.04 0.4 -0.06 l0 2.78 c-0.18 0.02 -0.32 0.06 -0.42 0.08 c-0.12 0.02 -0.32 0.02 -0.58 0.02 c-3.02 0 -5.38 -2.06 -5.38 -5.1 l0 -7.4 l3 0 l0 2.74 l2.8 0 z M17.4045 15 l0 5 l-3 0 l0 -5 c0 -1.38 -0.64 -2.32 -2.1 -2.32 c-1.44 0 -2.1 0.96 -2.1 2.32 l0 5 l-3 0 l0 -5 c0 -3.08 2.12 -5.1 5.1 -5.1 c3.1 0 5.1 2.12 5.1 5.1 z M17.948999999999998 10 l3 0 l0 10 l-3 0 l0 -10 z M19.448999999999998 9.06 c-1.02 0 -1.74 -0.72 -1.74 -1.74 c0 -1.04 0.72 -1.72 1.74 -1.72 c1.04 0 1.72 0.68 1.72 1.72 c0 1.06 -0.66 1.74 -1.72 1.74 z M21.3935 19.68 l0 -2.8 c1.32 0.4 2.98 0.48 4.34 0.48 c0.54 0 0.96 -0.02 1.26 -0.08 c0.28 -0.04 0.42 -0.14 0.42 -0.28 c0 -0.06 -0.02 -0.1 -0.06 -0.16 c-0.2 -0.2 -0.64 -0.3 -0.9 -0.36 s-0.6 -0.14 -1.02 -0.22 c-0.34 -0.06 -0.74 -0.14 -1.2 -0.24 c-1.56 -0.34 -2.76 -1.22 -2.76 -2.9 c0 -2.48 2.42 -3.22 4.46 -3.22 c1.28 0 2.56 0.18 3.82 0.44 l0 2.82 c-1.26 -0.38 -2.68 -0.48 -4 -0.48 c-0.52 0 -0.88 0.02 -1.1 0.08 s-0.34 0.16 -0.34 0.28 c0 0.18 0.18 0.3 0.52 0.36 c0.34 0.08 0.82 0.18 1.4 0.28 c0.52 0.1 1.02 0.2 1.5 0.32 c1.48 0.38 2.54 1.18 2.54 2.78 c0 2.68 -2.7 3.34 -4.86 3.34 c-1.36 0 -2.7 -0.18 -4.02 -0.44 z M33.498000000000005 15 l0 5 l-3 0 l0 -14 l3 0 l0 4.92 c0.7 -0.74 1.58 -1.02 2.58 -1.02 c2.84 0 4.62 2.44 4.62 5.1 l0 5 l-3 0 l0 -5 c0 -1.36 -0.54 -2.32 -2 -2.32 c-1.44 0 -2.2 0.92 -2.2 2.32 z M45.8825 17.12 l-2.1 2.88 l-3.3 0 l3.76 -5.14 l-3.56 -4.86 l3.3 0 l1.9 2.6 l1.9 -2.6 l3.3 0 l-3.54 4.86 l3.74 5.14 l-3.3 0 z"/>
                     </g>
                 </svg>
@@ -79,6 +87,9 @@
                 <a href="#contact" class="nav-item">Contact</a>
             </nav>
             <div class="nav-actions">
+                <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle Theme">
+                    <i class="fas fa-moon"></i>
+                </button>
                 <div id="menu-icon" class="menu-icon-btn" aria-label="Open Menu">
                     <span class="bar line-top"></span>
                     <span class="bar line-middle"></span>
@@ -376,16 +387,13 @@
                     <p class="skill-card-desc">Designing interfaces with fluid layouts, smooth physics engines, and optimal accessibility scores.</p>
                     <div class="skill-bar-list">
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>React & Next.js</span><span class="skill-val">90%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90%"></div></div>
+                            <div class="skill-progress-info"><span>React & Next.js</span><span class="skill-val">Experienced</span></div>
                         </div>
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>TypeScript</span><span class="skill-val">85%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85%"></div></div>
+                            <div class="skill-progress-info"><span>TypeScript</span><span class="skill-val">Comfortable</span></div>
                         </div>
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>CSS3 / Vanilla Grid / Flex</span><span class="skill-val">95%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95%"></div></div>
+                            <div class="skill-progress-info"><span>CSS3 / Vanilla Grid / Flex</span><span class="skill-val">Experienced</span></div>
                         </div>
                     </div>
                 </div>
@@ -400,16 +408,13 @@
                     <p class="skill-card-desc">Constructing secure, fault-tolerant REST APIs, WebSockets nodes, and relational designs.</p>
                     <div class="skill-bar-list">
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>Node.js / Express</span><span class="skill-val">85%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85%"></div></div>
+                            <div class="skill-progress-info"><span>Node.js / Express</span><span class="skill-val">Comfortable</span></div>
                         </div>
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>PostgreSQL / Relational SQL</span><span class="skill-val">80%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80%"></div></div>
+                            <div class="skill-progress-info"><span>PostgreSQL / Relational SQL</span><span class="skill-val">Comfortable</span></div>
                         </div>
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>MongoDB / Redis caching</span><span class="skill-val">80%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80%"></div></div>
+                            <div class="skill-progress-info"><span>MongoDB / Redis caching</span><span class="skill-val">Comfortable</span></div>
                         </div>
                     </div>
                 </div>
@@ -424,16 +429,13 @@
                     <p class="skill-card-desc">Optimizing algorithms and utilizing memory safety principles for systems coding.</p>
                     <div class="skill-bar-list">
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>C++ (OOP & DSA)</span><span class="skill-val">88%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="88%"></div></div>
+                            <div class="skill-progress-info"><span>C++ (OOP & DSA)</span><span class="skill-val">Comfortable</span></div>
                         </div>
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>JavaScript / TS</span><span class="skill-val">92%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="92%"></div></div>
+                            <div class="skill-progress-info"><span>JavaScript / TS</span><span class="skill-val">Experienced</span></div>
                         </div>
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>Rust (Core Safety)</span><span class="skill-val">65%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="65%"></div></div>
+                            <div class="skill-progress-info"><span>Rust (Core Safety)</span><span class="skill-val">Learning</span></div>
                         </div>
                     </div>
                 </div>
@@ -448,16 +450,13 @@
                     <p class="skill-card-desc">Orchestrating robust pipelines, shell scripts, and remote server virtualizations.</p>
                     <div class="skill-bar-list">
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>Git / GitHub Actions</span><span class="skill-val">90%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="90%"></div></div>
+                            <div class="skill-progress-info"><span>Git / GitHub Actions</span><span class="skill-val">Experienced</span></div>
                         </div>
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>Docker & Containers</span><span class="skill-val">75%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="75%"></div></div>
+                            <div class="skill-progress-info"><span>Docker & Containers</span><span class="skill-val">Learning</span></div>
                         </div>
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>Linux / Bash scripting</span><span class="skill-val">82%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="82%"></div></div>
+                            <div class="skill-progress-info"><span>Linux / Bash scripting</span><span class="skill-val">Comfortable</span></div>
                         </div>
                     </div>
                 </div>
@@ -472,16 +471,13 @@
                     <p class="skill-card-desc">Architecting robust systems and resolving structural bottlenecks with calm efficiency.</p>
                     <div class="skill-bar-list">
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>High availability routing</span><span class="skill-val">80%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="80%"></div></div>
+                            <div class="skill-progress-info"><span>High availability routing</span><span class="skill-val">Comfortable</span></div>
                         </div>
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>Asynchronous patterns</span><span class="skill-val">85%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="85%"></div></div>
+                            <div class="skill-progress-info"><span>Asynchronous patterns</span><span class="skill-val">Comfortable</span></div>
                         </div>
                         <div class="skill-progress-item">
-                            <div class="skill-progress-info"><span>Team Bottleneck Resolving</span><span class="skill-val">95%</span></div>
-                            <div class="skill-bar-track"><div class="skill-bar-fill" data-width="95%"></div></div>
+                            <div class="skill-progress-info"><span>Team Bottleneck Resolving</span><span class="skill-val">Experienced</span></div>
                         </div>
                     </div>
                 </div>
@@ -643,9 +639,11 @@
 
             <!-- Slide-out Side Panel for Detailed Case Study -->
             <div id="case-study-panel" class="case-study-overlay">
-                <div class="case-study-panel-container">
-                    <button class="panel-close-btn" aria-label="Close Case Study"><i class="fa-solid fa-xmark"></i></button>
-                    <div class="panel-content" id="case-study-details">
+            <div class="case-study-panel-container" data-lenis-prevent>
+                <button class="panel-close-btn" aria-label="Close Panel">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="panel-content" id="case-study-details">
                         <!-- Dynamic case study content loaded via JS -->
                     </div>
                 </div>
@@ -669,11 +667,11 @@
                         <h3>Full-Stack Developer</h3>
                         <p class="exp-company"><i class="fa-solid fa-location-arrow"></i> Self-Employed, Remote</p>
                         <p class="exp-desc">
-                            Developing personal products, responsive frameworks, and APIs. Managing clean database configurations in MongoDB, styling high-performance user interfaces in React/Next.js, and running continuous micro-optimization diagnostics.
+                            Developing personal projects and applications using React, Next.js, and Node.js. Implementing RESTful APIs and integrating MongoDB for data storage while focusing on responsive web design.
                         </p>
                         <div class="exp-highlights">
-                            <span><i class="fa-regular fa-circle-check"></i> Reduced layout shifts (CLS) to 0.0</span>
-                            <span><i class="fa-regular fa-circle-check"></i> Scaled socket connections via clustering</span>
+                            <span><i class="fa-regular fa-circle-check"></i> Built full-stack web applications</span>
+                            <span><i class="fa-regular fa-circle-check"></i> Implemented WebSocket functionality</span>
                         </div>
                         <div class="exp-tech-tags">
                             <span>React</span>
@@ -693,11 +691,11 @@
                         <h3>Selected Builder — buildspace Season 5</h3>
                         <p class="exp-company"><i class="fa-solid fa-location-arrow"></i> Self-Employed, Remote</p>
                         <p class="exp-desc">
-                            Selected for buildspace Season 5, a global builder community. Built and shipped a product from scratch within strict 6-week timelines. Interacted with international devs and integrated client-feedback reviews.
+                            Participated in buildspace Season 5 to build and launch a project over a 6-week period. Engaged with the community and iterated on feedback.
                         </p>
                         <div class="exp-highlights">
-                            <span><i class="fa-regular fa-circle-check"></i> Developed MVP in 3 weeks</span>
-                            <span><i class="fa-regular fa-circle-check"></i> Integrated real-time socket modules</span>
+                            <span><i class="fa-regular fa-circle-check"></i> Developed and deployed a minimum viable product</span>
+                            <span><i class="fa-regular fa-circle-check"></i> Integrated real-time messaging features</span>
                         </div>
                         <div class="exp-tech-tags">
                             <span>React</span>
@@ -716,11 +714,11 @@
                         <h3>Freelance Web Developer</h3>
                         <p class="exp-company"><i class="fa-solid fa-location-arrow"></i> Self-Employed, Remote</p>
                         <p class="exp-desc">
-                            Designed and deployed high-performance responsive landing pages and custom tools for local businesses. Worked closely with clients to improve visual quality, loading speed, and responsive compatibility.
+                            Developed responsive landing pages and web tools for local clients. Communicated with clients to gather requirements and implement design improvements.
                         </p>
                         <div class="exp-highlights">
-                            <span><i class="fa-regular fa-circle-check"></i> Optimized load speed by 40%</span>
-                            <span><i class="fa-regular fa-circle-check"></i> Handcrafted custom responsive grids</span>
+                            <span><i class="fa-regular fa-circle-check"></i> Improved website load times</span>
+                            <span><i class="fa-regular fa-circle-check"></i> Created responsive layouts</span>
                         </div>
                         <div class="exp-tech-tags">
                             <span>HTML5</span>
@@ -779,7 +777,7 @@
                 <div class="contact-info-deck">
                     <h3>Let's build something beautiful.</h3>
                     <p class="contact-deck-sub">
-                        Have an ambitious project, a role opening, or just want to chat about compilers, calisthenics, or football? Feel free to reach out. I response to all details.
+                        Have an ambitious project, a role opening, or just want to chat about compilers, calisthenics, or football? Feel free to reach out. I reply to every genuine message.
                     </p>
 
                     <div class="contact-methods">

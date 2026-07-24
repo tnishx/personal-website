@@ -1,6 +1,34 @@
 // wait for DOM content to fully load
 document.addEventListener('DOMContentLoaded', () => {
 
+    /* THEME TOGGLE */
+    const themeBtn = document.getElementById('theme-toggle');
+    const themeIcon = themeBtn ? themeBtn.querySelector('i') : null;
+    
+    // Apply persisted theme immediately
+    const currentTheme = localStorage.getItem('theme') || 'dark';
+    if (currentTheme === 'light') {
+        document.documentElement.setAttribute('data-theme', 'light');
+        if (themeIcon) {
+            themeIcon.classList.replace('fa-moon', 'fa-sun');
+        }
+    }
+
+    if (themeBtn) {
+        themeBtn.addEventListener('click', () => {
+            const isLight = document.documentElement.getAttribute('data-theme') === 'light';
+            if (isLight) {
+                document.documentElement.removeAttribute('data-theme');
+                localStorage.setItem('theme', 'dark');
+                themeIcon.classList.replace('fa-sun', 'fa-moon');
+            } else {
+                document.documentElement.setAttribute('data-theme', 'light');
+                localStorage.setItem('theme', 'light');
+                themeIcon.classList.replace('fa-moon', 'fa-sun');
+            }
+        });
+    }
+
     /*SMOOTH SCROLLING (Lenis)*/
     const lenis = new Lenis({
         duration: 1.2,
@@ -523,9 +551,12 @@ document.addEventListener('DOMContentLoaded', () => {
         'stranger-kun': {
             title: 'Stranger-kun',
             number: '01',
-            objective: 'Build a lightning-fast anonymous messaging and video connection hub capable of matching users in under 100 milliseconds without storing metadata.',
-            challenges: 'Traditional WebRTC coordination relies on heavy orchestration loops. Establishing peer paths without centralized servers resulted in connection drops, while typical REST APIs added too much overhead for high-concurrency matches.',
-            solutions: 'Implemented an optimized matching algorithm using priority queues. Built lightweight WebSocket signaling nodes and integrated ICE candidates routing matrices to establish P2P sessions in sub-100ms ranges.',
+            problem: 'Users need a way to connect via video and messaging anonymously and quickly without creating accounts or storing personal data.',
+            solution: 'Built a web application that pairs users randomly for real-time chat and video communication.',
+            techStack: ['React.js', 'Node.js', 'WebRTC', 'WebSocket'],
+            features: 'Anonymous pairing, real-time text chat, P2P video streaming, skip/next functionality.',
+            challenges: 'Managing WebRTC signaling and establishing reliable P2P connections between diverse network configurations (NATs/Firewalls).',
+            outcome: 'Successfully deployed a functional anonymous chat platform with sub-second matching and reliable video connections.',
             architecture: ['React.js Frontend UI', 'Node.js Matching Engine', 'WebRTC Peer signaling', 'WebSocket Cluster Nodes']
         },
         'aetherengine': {
@@ -556,9 +587,10 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!data || !caseStudyContent) return;
         
         let archNodesHtml = '';
-        data.architecture.forEach((node, index) => {
+        const nodesList = data.techStack || data.architecture;
+        nodesList.forEach((node, index) => {
             archNodesHtml += `<div class="arch-node ${index % 2 === 0 ? 'accent' : ''}">${node}</div>`;
-            if (index < data.architecture.length - 1) {
+            if (index < nodesList.length - 1) {
                 archNodesHtml += `<div class="arch-arrow"><i class="fa-solid fa-arrow-down"></i></div>`;
             }
         });
@@ -569,10 +601,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 <h2>${data.title}</h2>
             </div>
             
+            ${data.problem ? `
+            <div class="cs-block">
+                <h4>Problem</h4>
+                <p>${data.problem}</p>
+            </div>
+            ` : `
             <div class="cs-block">
                 <h4>Objective</h4>
                 <p>${data.objective}</p>
             </div>
+            `}
+
+            ${data.features ? `
+            <div class="cs-block">
+                <h4>Key Features</h4>
+                <p>${data.features}</p>
+            </div>
+            ` : ''}
             
             <div class="cs-block">
                 <h4>Technical Challenges</h4>
@@ -580,12 +626,19 @@ document.addEventListener('DOMContentLoaded', () => {
             </div>
             
             <div class="cs-block">
-                <h4>Solutions</h4>
-                <p>${data.solutions}</p>
+                <h4>${data.solution ? 'Solution' : 'Solutions'}</h4>
+                <p>${data.solution || data.solutions}</p>
             </div>
+
+            ${data.outcome ? `
+            <div class="cs-block">
+                <h4>Outcome</h4>
+                <p>${data.outcome}</p>
+            </div>
+            ` : ''}
             
             <div class="cs-block">
-                <h4>Architecture Design</h4>
+                <h4>${data.techStack ? 'Tech Stack' : 'Architecture Design'}</h4>
                 <div class="cs-architecture-graphic">
                     <div class="arch-node-list">
                         ${archNodesHtml}
