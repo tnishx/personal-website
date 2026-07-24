@@ -420,7 +420,7 @@ document.addEventListener('DOMContentLoaded', () => {
         ],
         skills: () => [
             { text: 'Tech Stack:', color: 'text-green' },
-            { text: '  Frontend  → React, Next.js, TypeScript, CSS3' },
+            { text: '  Frontend  → React, Next.js, TypeScript, CSS5' },
             { text: '  Backend   → Node.js, Express, PostgreSQL, MongoDB' },
             { text: '  Languages → JavaScript, C++, Rust' },
             { text: '  Tools     → Git, Docker, Linux, Bash' },
@@ -457,7 +457,7 @@ document.addEventListener('DOMContentLoaded', () => {
             { text: new Date().toString(), color: 'text-cyan' },
         ],
         uptime: () => {
-            const start = new Date(2022, 0, 1);
+            const start = new Date(2024, 7, 1);
             const now = new Date();
             const days = Math.floor((now - start) / (1000 * 60 * 60 * 24));
             return [
@@ -551,12 +551,12 @@ document.addEventListener('DOMContentLoaded', () => {
         'stranger-kun': {
             title: 'Stranger-kun',
             number: '01',
-            problem: 'Users need a way to connect via video and messaging anonymously and quickly without creating accounts or storing personal data.',
-            solution: 'Built a web application that pairs users randomly for real-time chat and video communication.',
-            techStack: ['React.js', 'Node.js', 'WebRTC', 'WebSocket'],
-            features: 'Anonymous pairing, real-time text chat, P2P video streaming, skip/next functionality.',
+            problem: 'Establishing reliable peer-to-peer connections required implementing WebRTC signaling, handling ICE candidate exchange, and dealing with NAT traversal using STUN/TURN servers while maintaining a seamless user experience.',
+            solution: 'Built a React frontend with a Node.js backend using Socket.IO for user matchmaking and signaling. Once paired, WebRTC established direct peer-to-peer media streams while Socket.IO handled connection lifecycle events such as matching, skipping, and reconnection.',
+            techStack: ['React','Socket.IO (Signaling)','Node.js + Express','Matchmaking WebRTC Signaling','Peer-to-Peer Connection'],
+            features: 'Instant anonymous user matching, Real-time text messaging with WebSockets, Peer-to-peer video communication using WebRTC, Skip/Next matching without page reloads',
             challenges: 'Managing WebRTC signaling and establishing reliable P2P connections between diverse network configurations (NATs/Firewalls).',
-            outcome: 'Successfully deployed a functional anonymous chat platform with sub-second matching and reliable video connections.',
+            outcome: 'Delivered a fully functional anonymous chat platform supporting instant user matching, real-time messaging, and peer-to-peer video communication with a responsive user experience across desktop and mobile devices.',
             architecture: ['React.js Frontend UI', 'Node.js Matching Engine', 'WebRTC Peer signaling', 'WebSocket Cluster Nodes']
         },
         'aetherengine': {
